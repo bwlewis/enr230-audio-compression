@@ -202,7 +202,7 @@ example in the last section, confirmed by viewing the data with the command
 \verb@plot(b)@ (try it!). However, it too can be interpolated and/or
 least-squares fit with a cosine model:
 \[
-y = c_0 + c_1\cos\omega_1t + c_2\cos\omega_2t + \cdots + c_{n-1}\omega_{n-1}t,
+y = c_0 + c_1\cos\omega_1t + c_2\cos\omega_2t + \cdots + c_{n-1}\cos\omega_{n-1}t,
 \]
 for some positive integer $n-1$ and frequencies ${\omega_j}$.  A famous and
 important result from information theory called the Shannon-Nyquist theorem
@@ -329,8 +329,9 @@ cut off frequencies below 200 {\it and} above 5000 cycles/second. }
 {\bf How much does the above code reduce the storage requirement of the sample
 (in bit rate)?}
 
+\break
 \section*{The ideas behind mp3}
-Digital ﬁfiltering is an effective technique for compressing audio
+Digital filtering is an effective technique for compressing audio
 data in many situations, especially telephony. Cutting out entire
 frequency ranges is rather a brute-force method, however. There are
 more effective ways to reduce the storage required of digital audio
@@ -343,16 +344,14 @@ This technique is called quantization.
 
 \begin{wrapfigure}{r}{0.45\textwidth}
   \begin{center}
-  \vspace{-30pt}
 \includegraphics[angle=270,width=0.44\textwidth]{fig3}
   \end{center}
-  \vspace{-20pt}
 \end{wrapfigure}
 We've already encountered that we don't hear all frequencies
 equally well. This phenomenon has been studied extensively, and as
 a result we have a pretty good model of ``average'' human frequency
 perception. 
-The ﬁfigure shows an example perceptual
+The figure shows an example perceptual
 frequency response curve from zero to 11kHz 
 adapted from an international standard ISO226, 
 generated with the psyweight and iso226 functions included with this project. 
