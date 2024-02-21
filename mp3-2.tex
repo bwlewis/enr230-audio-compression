@@ -217,6 +217,16 @@ N = length(b)
 sound(b,R);
 \end{verbatim}
 
+\subsubsection*{Hank Williams}
+\begin{verbatim}
+url = "https://github.com/bwlewis/enr230-audio-compression/raw/main/hank.wav";
+urlwrite(url, "sample.wav");
+[b, R] = audioread("sample.wav");
+b = b(:,1);  %% take just first channel of the stereo signal
+N = length(b)
+sound(b,R);
+\end{verbatim}
+
 Some versions of MATLAB and Octave may have slightly different syntax--use the
 help command for more detailed information. 
  
